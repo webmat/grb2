@@ -5,9 +5,24 @@ module Commands
       @branch = options.fetch(:branch, "a_branch")
       @remote = options.fetch(:remote, "origin")
     end
-  end
 
-  def run
-    raise NotImplementedError
+    def commands
+      raise NotImplementedError
+    end
+
+    def run
+      commands.each do |cmd|
+        run_command(cmd)
+      end
+    end
+
+    def run_command(cmd)
+      `#{cmd}`
+    end
+
+    def git
+      'git'
+    end
+
   end
 end
