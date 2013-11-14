@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require 'grb'
+Grb::CLI.start(ARGV)
