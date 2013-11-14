@@ -1,4 +1,7 @@
 require "grb/version"
+require "grb/commands"
+require "grb/commands/abstract"
+
 require 'thor'
 
 module Grb
